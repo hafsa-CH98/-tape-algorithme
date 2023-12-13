@@ -1,0 +1,30 @@
+Algorithme:
+
+premier étape Diviser en mots et caractères en mots séparés par des espaces
+et Boucle sur les caractères Parcourir chaque caractère dans textWithChar en utilisant une boucle for 
+et aprés a l'intérieur de la boucle vérifier si le caractère actuel (textWithChar[i]) est une voyelle et Comptage des mots et aprés Affichage des résultats.
+
+
+
+
+
+let text = "Test taic tae jhgjhg. jgtjhg jhgjg. khkjhkjh efagh";
+let words = 0;
+let voy = 0
+
+function algo(str) {
+    const textWithSplit = str.split(" ");
+    const textWithChar = str.split("");
+    for (let i = 0; textWithChar[i]; i++) {
+        if (textWithChar[i] == 'e' || textWithChar[i] == 'a' || textWithChar[i] == 'o' || textWithChar[i] == 'i' ||  textWithChar[i] == 'u' || textWithChar[i] == 'y') {
+            voy = voy + 1;
+        }
+    }
+    words = textWithSplit.length;    
+    
+    console.log("Words = ", words)
+    console.log("Voy = ", voy)
+
+}
+
+algo(text)
